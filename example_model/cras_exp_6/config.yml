@@ -1,0 +1,62 @@
+!!python/object/apply:collections.OrderedDict
+- - - actor_lr
+    - 0.0005
+  - - batch_size
+    - 256
+  - - buffer_size
+    - 10000
+  - - critic_lr
+    - 0.0005
+  - - env_kwargs
+    - goal_tolerance_parameters:
+        N_ts: 200000
+        final_tol: 0.001
+        function: decay
+        inc_tol_obs: true
+        initial_tol: 0.02
+      initial_q:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      joint_representation: trig
+      model: exact
+      relative_q: true
+      resample_joints: false
+  - - gamma
+    - 0.95
+  - - goal_selection_strategy
+    - future
+  - - model_class
+    - ddpg
+  - - n_sampled_goal
+    - 4
+  - - n_timesteps
+    - 500000.0
+  - - nb_eval_steps
+    - 200
+  - - noise_std
+    - - 0.00065
+      - 0.00065
+      - 0.00065
+      - 0.025
+      - 0.025
+      - 0.025
+  - - noise_type
+    - normal
+  - - normalize_observations
+    - true
+  - - normalize_returns
+    - false
+  - - policy
+    - MlpPolicy
+  - - policy_kwargs
+    - dict(layers=[128, 128, 128])
+  - - random_exploration
+    - 0.294
+  - - render
+    - false
+  - - render_eval
+    - false

@@ -123,7 +123,7 @@ class ConcentricTubeRobotPolicyNode(object):
 if __name__ == '__main__':
     rospy.init_node("eval_node")
     env_id = "CTR-Reach-v0"
-    model_path = "/home/keshav/ctm2-stable-baselines/saved_results/icra_experiments/cras_exp_6/learned_policy/500000_saved_model.pkl"
+    model_path = "../example_model/cras_exp_6/learned_policy/500000_saved_model.pkl"
     rospy.wait_for_service("/ctr_reset")
     ctr_policy = ConcentricTubeRobotPolicyNode(env_id, model_path)
 
